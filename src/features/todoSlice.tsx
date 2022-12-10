@@ -1,11 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { PostsData } from "../DummyData";
 import {Todo} from './type'
 
 const initialState: Todo[] = [];
 
-export const postSlice = createSlice({
-  name: "posts",
+export const todoSlice = createSlice({
+  name: "todos",
   initialState: { value: initialState},
   reducers: {
     addTodo: (state, action) => {
@@ -13,10 +12,10 @@ export const postSlice = createSlice({
     },
 
     deleteTodo: (state, action) => {
-      state.value = state.value.filter((post) => post.id !== action.payload.id);
+      state.value = state.value.filter((todo) => todo.id !== action.payload.id);
     },
   },
 });
 
-export const { addTodo, deleteTodo } = postSlice.actions;
-export default postSlice.reducer;
+export const { addTodo, deleteTodo } = todoSlice.actions;
+export default todoSlice.reducer;

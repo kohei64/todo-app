@@ -4,11 +4,11 @@ import { Provider } from 'react-redux';
 import App from './App';
 import './index.css';
 import { configureStore } from '@reduxjs/toolkit';
-import postsReducer from './features/todoSlice'
+import todoReducer from './features/todoSlice'
 
 const store = configureStore({
   reducer: {
-    posts: postsReducer,
+    todos: todoReducer,
   },
 });
 
