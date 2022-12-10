@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deleteTodo } from "../features/todoSlice";
+import Timer from "./Timer";
 
 const TodoList = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ const TodoList = () => {
               </div>
             </li>
             <div className="border-t border-gray-500 p-3">
+              <Timer />
               <button onClick={() => dispatch(deleteTodo({ id: todo.id }))}>
                 削除
                 {/* <svg
