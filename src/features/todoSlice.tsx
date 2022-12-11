@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {Todo} from './type'
 
-const initialState: Todo[] = [];
+const TodoState: Todo[] = [];
 
 export const todoSlice = createSlice({
   name: "todos",
-  initialState: { value: initialState},
+  initialState: { value: TodoState},
   reducers: {
     addTodo: (state, action) => {
       state.value.push(action.payload);
