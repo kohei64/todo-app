@@ -5,10 +5,12 @@ import App from './App';
 import './index.css';
 import { configureStore } from '@reduxjs/toolkit';
 import todoReducer from './features/todoSlice'
+import timerReducer from './features/timerSlice'
 
 const store = configureStore({
   reducer: {
     todos: todoReducer,
+    timer: timerReducer,
   },
 });
 
