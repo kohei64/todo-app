@@ -13,7 +13,7 @@ const AddTodo = () => {
     if (!text.trim()) {
       return;
     }
-    dispatch(addTodo({ id: uuid(), name: text }));
+    dispatch(addTodo({ id: uuid(), name: text}));
 
     setText("");
   };
